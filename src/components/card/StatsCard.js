@@ -7,6 +7,7 @@ const StatsCard = ({ title, count, icon, change, changeColor }) => {
   const changeTextColor = change.startsWith('-') ? 'danger' : 'success';
 
   return (
+    
     <Card bg="dark" text="white" className="mb-2 " style={{ height: "90%" }}>
       <Card.Body className="d-flex align-items-center p-2">
         <Row className="w-100">

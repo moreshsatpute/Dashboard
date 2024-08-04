@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
-import { FaTachometerAlt ,FaShoppingCart, FaBox, FaUser  } from 'react-icons/fa';
+import { FaTachometerAlt, FaShoppingCart, FaBox, FaUser } from 'react-icons/fa';
 
 
 const Sidebar = () => (
@@ -18,7 +18,7 @@ const Sidebar = () => (
         <Nav.Item>
             <Nav.Link href="#products">
                 <FaBox />
-                </Nav.Link>
+            </Nav.Link>
         </Nav.Item>
         <Nav.Item>
             <Nav.Link href="#customers"><FaUser /></Nav.Link>
