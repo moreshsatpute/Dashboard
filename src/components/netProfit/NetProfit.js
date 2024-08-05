@@ -32,13 +32,13 @@ const NetProfit = () => {
     <Container p-4>
       <Row>
         <Col md={6}>
-          <h3>$6759.25</h3>
+          <h3 className='mt-4'>$6759.25</h3>
         </Col>
         <Col md={6} style={{ marginTop: 0 }}>
           <div style={{ width: '80px', height: '80px' }}>
             <Doughnut data={data} options={options} />
           </div>
-          <p>*The values here have been rounded off.</p>
+          <p>*The values here have.</p>
         </Col>
       </Row>
     </Container>

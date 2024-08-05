@@ -1,0 +1,54 @@
+/* General App styling */
+.App {
+    background-color: black;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: white; /* Ensure text is visible against the black background */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #343a40; /* Ensure header has a background color */
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    background-color: #343a40;
+    color: white; /* Ensure text is visible */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    width: 100px !important; /* Default width for larger screens */
+  }
+  
+  .dashboard {
+    /* margin-left: 250px; Offset for the fixed sidebar */
+    padding-top: 60px; /* Space for the fixed header */
+    font-family: 'Roboto', Arial, sans-serif;
+    padding-left: 10px; /* Default padding for left side */
+    padding-right: 10px; /* Default padding for right side */
+  }
+  
+  /* Example usage of different font weights */
+  .header h1 {
+    font-weight: 600;
+  }
+  
+  .sidebar p {
+    font-weight: 300;
+  }
+  
+  .dashboard .section-title {
+    font-weight: 500;
+  }
+  
+  .dashboard .content {
+    font-weight: 400;
+  }
+  

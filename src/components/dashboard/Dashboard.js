@@ -42,16 +42,16 @@ const Dashboard = () => {
 
   return (
     <div>
-      <Container className="p-4 text-white">
+      <Container className=" text-white">
         <div className='dashboard p-1 text-white'>
           <h3 className="font-weight-500">Dashboard</h3>
         </div>
         <Row>
-          <Col md={7}>
-            <Row>
+          <Col md={7} >
+            <Row >
               {stats.map((stat, index) => (
-                <Col key={index} sm={6} lg={3} style={{ marginBottom: '10px' }}>
-                  <StatsCard
+                <Col key={index} sm={6} lg={3} className="mb-3" style={{ height: "140px" }}>
+                  <StatsCard  
                     title={stat.title}
                     count={stat.count}
                     icon={stat.icon}
@@ -65,14 +65,14 @@ const Dashboard = () => {
             </Row>
             <Row>
               <Col>
-                <Card bg="dark" text="white" className="mb-2" style={{ height: "180px" }}>
+                <Card bg="dark" text="white" className="mb-3" style={{ height: "180px" }}>
                   <ActivityChart />
                 </Card>
               </Col>
             </Row>
             <Row>
               <Col>
-                <Card bg="dark" text="white" className="mb-2" style={{ height: "270px" }}>
+                <Card bg="dark" text="white" className="mb-3" style={{ height: "270px" }}>
                   <Card.Body className="d-flex flex-column h-100">
                     <Card.Title className="font-weight-500">
                       Recent Orders
@@ -86,7 +86,7 @@ const Dashboard = () => {
             </Row>
           </Col>
           <Col md={5}>
-            <Card bg="dark" text="white" className="mb-2" style={{ height: "140px" }}>
+            <Card bg="dark" text="white" className="mb-3" style={{ height: "140px" }}>
               <Card.Body className="d-flex flex-column h-100">
                 <Row className="flex-grow-1">
                   <Col className="d-flex align-items-center">
@@ -100,14 +100,14 @@ const Dashboard = () => {
                 </Row>
               </Card.Body>
             </Card>
-            <Card bg="dark" text="white" className="mb-2" style={{ height: "180px" }}>
+            <Card bg="dark" text="white" className="mb-3" style={{ height: "180px" }}>
               <Card.Body className="d-flex flex-column h-100">
                 <div className="flex-grow-1">
                   <CustomList />
                 </div>
               </Card.Body>
             </Card>
-            <Card bg="dark" text="white" className="mb-2" style={{ height: "270px" }}>
+            <Card bg="dark" text="white" className="mb-3" style={{ height: "270px" }}>
               <Card.Body className="d-flex flex-column h-100">
                 <Card.Title className="font-weight-500">
                   Customer's Feedback
