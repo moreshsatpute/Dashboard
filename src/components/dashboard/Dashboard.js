@@ -7,6 +7,7 @@ import CustomerFeedback from '../customerFeedback/CustomerFeedback';
 import NetProfit from '../netProfit/NetProfit';
 import ActivityChart from '../activityChart/ActivityChart';
 import CustomList from '../customList/CustomList';
+import './Dashboard.css'; // Import the CSS file
 
 const Dashboard = () => {
   const stats = [
@@ -41,17 +42,17 @@ const Dashboard = () => {
   ];
 
   return (
-    <div>
-      <Container className=" text-white">
-        <div className='dashboard p-1 text-white'>
+    <div className="dashboard">
+      <Container className="text-white">
+        <div className='dashboard-header'>
           <h3 className="font-weight-500">Dashboard</h3>
         </div>
         <Row>
-          <Col md={7} >
-            <Row >
+          <Col md={7}>
+            <Row>
               {stats.map((stat, index) => (
                 <Col key={index} sm={6} lg={3} className="mb-3" style={{ height: "140px" }}>
-                  <StatsCard  
+                  <StatsCard
                     title={stat.title}
                     count={stat.count}
                     icon={stat.icon}
@@ -65,19 +66,19 @@ const Dashboard = () => {
             </Row>
             <Row>
               <Col>
-                <Card bg="dark" text="white" className="mb-3" style={{ height: "180px" }}>
+                <Card bg="dark" text="white" className="mb-3 " style={{ height: "220px" }}>
                   <ActivityChart />
                 </Card>
               </Col>
             </Row>
             <Row>
               <Col>
-                <Card bg="dark" text="white" className="mb-3" style={{ height: "270px" }}>
+                <Card bg="dark" text="white" className="mb-3" style={{ height: "300px" }}>
                   <Card.Body className="d-flex flex-column h-100">
                     <Card.Title className="font-weight-500">
                       Recent Orders
                     </Card.Title>
-                    <div className="flex-grow-1 overflow-auto">
+                    <div className="flex-grow-1 overflow-auto custom-scrollbar"style={{ maxHeight: "250px" }}>
                       <RecentOrders />
                     </div>
                   </Card.Body>
@@ -94,25 +95,25 @@ const Dashboard = () => {
                   </Col>
                 </Row>
                 <Row className="flex-grow-1">
-                  <Col className="d-flex align-items-center">
+                  <Col className="d-flex align-items-center" >
                     <NetProfit />
                   </Col>
                 </Row>
               </Card.Body>
             </Card>
-            <Card bg="dark" text="white" className="mb-3" style={{ height: "180px" }}>
+            <Card bg="dark" text="white" className="mb-3" style={{ height: "220px" }}>
               <Card.Body className="d-flex flex-column h-100">
                 <div className="flex-grow-1">
                   <CustomList />
                 </div>
               </Card.Body>
             </Card>
-            <Card bg="dark" text="white" className="mb-3" style={{ height: "270px" }}>
+            <Card bg="dark" text="white" className="mb-3" style={{ height: "300px" }}>
               <Card.Body className="d-flex flex-column h-100">
                 <Card.Title className="font-weight-500">
                   Customer's Feedback
                 </Card.Title>
-                <div className="flex-grow-1 overflow-auto">
+                <div className="flex-grow-1 overflow-auto custom-scrollbar" style={{ maxHeight: "250px" }}>
                   <CustomerFeedback />
                 </div>
               </Card.Body>
