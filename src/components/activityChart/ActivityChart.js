@@ -77,9 +77,12 @@ const ActivityChart = () => {
     };
 
     return (
+    
+            
         <div style={{ width: '100%', height: '400px', padding: '20px', boxSizing: 'border-box' }}>
             <Bar data={data} options={options} />
         </div>
+        
     );
 };
 

@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Header from './components/header/Header';
 import Sidebar from './components/sidebar/Sidebar';
 import Dashboard from './components/dashboard/Dashboard';
-import "./App.css"
+import "./App1.css";
 
 function App() {
   return (
@@ -11,10 +11,10 @@ function App() {
       <Header />
       <Container fluid style={{ paddingTop: '60px' }}>
         <Row>
-          <Col md={1} style={{ padding: 0, width: '3px' }}>
+          <Col xs={1} md={1} sm={1} className="p-0 vh-100">
             <Sidebar />
           </Col>
-          <Col md={11} style={{  }}>
+          <Col xs={11} md={11} sm={11} className="p-0">
             <Dashboard />
           </Col>
         </Row>
